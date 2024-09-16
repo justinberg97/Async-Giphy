@@ -12,6 +12,7 @@ async function getImage(query) {
         const data = await response.json();
         const url = data.data.images.original.url;
         console.log(url)
+        return url;
     } catch (error) {
         console.error('Error fetching the gif:' , error)
     }
