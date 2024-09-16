@@ -9,7 +9,7 @@ const endpoint = 'https://api.giphy.com/v1/gifs/random?api_key=' + process.env.A
 async function getImage(query) {
     try {
         const response = await fetch(`${endpoint}${query}`);
-        const data = await response.json;
+        const data = await response.json();
         const url = data.data.images.original.url;
         console.log(url)
     } catch (error) {
